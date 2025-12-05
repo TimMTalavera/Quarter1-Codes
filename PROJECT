@@ -1,0 +1,127 @@
+📌 Final Project Proposal (Final Draft)
+🏥 Project Title
+
+Hospital Patient Record Analyzer
+
+🔍 Problem Statement
+
+Problem: Hospitals collect a lot of patient information, but raw data is often hard to read and understand.
+Hospitals need clear summaries of patient visits, doctor workload, and activity patterns to make faster decisions.
+Our dataset helps address this by organizing patient visit records, doctors consulted, and other details so users can easily see trends in hospital operations.
+
+🎯 Project Description
+
+The Hospital Patient Record Analyzer is a Python program that reads patient information from a JSON file called hospital.json and organizes details such as the 
+number of visits,the doctors each patient consulted, and basic activity patterns. The project aims to help users easily search and analyze patient or doctor 
+information through clear summaries, visit counts, and rankings. Its main goal is to practice using Python with JSON data, loops, and conditions, 
+while showing how hospitals can use organized data to track frequent patients,identify busy doctors, and quickly access important insights.
+
+⚙️ Planned Features
+1.) Show full patient records
+
+Displays name, number of visits, and doctors consulted.
+
+2.) Search patient by name
+
+Finds and shows details about a specific patient.
+
+3.) Show doctors consulted by a patient
+
+Lists all doctors assigned to that patient.
+
+4.) Identify the most visited doctor
+
+Shows which doctor has the highest number of total visits.
+
+5.) Find the patient with the most visits
+
+Displays the name and visit count of the top patient.
+
+6.) Show top 3 most visited doctors
+
+Ranks doctors based on total visits.
+
+7.) Show average visits per patient
+
+Computes total visits divided by number of patients.
+
+⌨️ Planned Inputs and Outputs
+Inputs
+
+Patient name
+
+Doctor name (for ranking features)
+
+Category or field depending on menu choices
+
+Outputs
+
+Patient visit count
+
+Doctors consulted
+
+Most visited doctor
+
+Patient with the most visits
+
+Summary statistics
+
+Top 3 doctor rankings
+
+🧠 Logic Plan
+
+You may choose ONE logic format.
+
+Option 1: Pseudocode
+Start Program
+Load JSON file "hospital.json"
+
+Display menu:
+1. Show all patient records
+2. Search patient by name
+3. Show doctors consulted by a patient
+4. Show most visited doctor
+5. Show patient with most visits
+6. Show top 3 most visited doctors
+7. Show average visits per patient
+8. Exit program
+
+Ask user for choice
+
+IF choice == 1:
+    Display all patient records
+
+ELSE IF choice == 2:
+    Ask for patient name
+    Search JSON
+    Show patient details or "Not found"
+
+ELSE IF choice == 3:
+    Ask for patient name
+    Show doctors consulted
+
+ELSE IF choice == 4:
+    Compute total visits per doctor
+    Display most visited doctor
+
+ELSE IF choice == 5:
+    Identify patient with highest visits
+    Display result
+
+ELSE IF choice == 6:
+    Sort doctors by visit count
+    Display top 3
+
+ELSE IF choice == 7:
+    Compute average visits
+    Display result
+
+ELSE IF choice == 8:
+    End program
+
+Repeat menu until user chooses Exit
+End Program
+
+Option 2 
+Flowchart: 
+
