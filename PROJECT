@@ -1,127 +1,128 @@
-📌 Final Project Proposal (Final Draft)
+📌 Final Project Proposal 
 🏥 Project Title
 
 Hospital Patient Record Analyzer
 
 🔍 Problem Statement
 
-Problem: Hospitals collect a lot of patient information, but raw data is often hard to read and understand.
-Hospitals need clear summaries of patient visits, doctor workload, and activity patterns to make faster decisions.
-Our dataset helps address this by organizing patient visit records, doctors consulted, and other details so users can easily see trends in hospital operations.
+Hospitals collect large amounts of patient information, but raw data is difficult to read and understand. Medical staff need fast and clear summaries of patient visits, doctor workloads, 
+and basic patient demographics to make better decisions. This project solves that by organizing patient visit records, searchable patient IDs, and statistical summaries like average age and top visitors.
 
 🎯 Project Description
 
-The Hospital Patient Record Analyzer is a Python program that reads patient information from a JSON file called hospital.json and organizes details such as the 
-number of visits,the doctors each patient consulted, and basic activity patterns. The project aims to help users easily search and analyze patient or doctor 
-information through clear summaries, visit counts, and rankings. Its main goal is to practice using Python with JSON data, loops, and conditions, 
-while showing how hospitals can use organized data to track frequent patients,identify busy doctors, and quickly access important insights.
+The Hospital Patient Record Analyzer is a Python-based program that reads patient information 
+from a JSON file (hospital.json). It organizes data such as patient_id, number of visits, doctors consulted, and patient age.
+The system allows users to search for patients, find the most visited doctor, identify which patient has the highest 
+number of visits,and compute the average age of patients.Its main goal is to help users analyze hospital data through basic 
+Python operations such as loops, conditions, and JSON handling, while demonstrating how organized data can support hospital decision-making.
 
 ⚙️ Planned Features
 1.) Show full patient records
 
-Displays name, number of visits, and doctors consulted.
+Displays all patients’ names, patient_ids, number of visits, and doctors consulted.
 
-2.) Search patient by name
+2.) Search patient by patient_id
 
-Finds and shows details about a specific patient.
+Asks the user to input a patient_id, searches the dataset, and shows the patient's details if found.
+If no match is found, displays "Patient not found."
 
-3.) Show doctors consulted by a patient
+3.) Show most visited doctor
 
-Lists all doctors assigned to that patient.
+Calculates which doctor has the highest total visits.
 
-4.) Identify the most visited doctor
+Equation used:
 
-Shows which doctor has the highest number of total visits.
+total_visits_doctor = sum(patient_visits)
 
-5.) Find the patient with the most visits
+4.) Show patient with the most visits
 
-Displays the name and visit count of the top patient.
+Identifies the patient with the highest number of hospital visits and displays their name and total visits.
 
-6.) Show top 3 most visited doctors
+6.) Show average age of patients
 
-Ranks doctors based on total visits.
+Computes the average age of all patients in the dataset.
 
-7.) Show average visits per patient
+Equation used:
 
-Computes total visits divided by number of patients.
+average_age = total_age_of_all_patients / number_of_patients
 
-⌨️ Planned Inputs and Outputs
-Inputs
+7.) Exit program
 
-Patient name
+Ends the program.
 
-Doctor name (for ranking features)
 
-Category or field depending on menu choices
+⌨️ Planned Inputs and Outputs 
+Inputs (Parallelogram)
 
-Outputs
+patient_id
 
-Patient visit count
+menu choice (1–7)
 
-Doctors consulted
+Outputs (Rectangle)
 
-Most visited doctor
+full patient record list
 
-Patient with the most visits
+patient details (via patient_id)
 
-Summary statistics
+most visited doctor
 
-Top 3 doctor rankings
+patient with most visits
 
-🧠 Logic Plan
+average age of patients
 
-You may choose ONE logic format.
+“Not found” or “Invalid choice” messages
 
-Option 1: Pseudocode
+🧠 Logic Plan (UPDATED)
+Option 1: Updated Pseudocode
 Start Program
 Load JSON file "hospital.json"
 
-Display menu:
-1. Show all patient records
-2. Search patient by name
-3. Show doctors consulted by a patient
-4. Show most visited doctor
-5. Show patient with most visits
-6. Show top 3 most visited doctors
-7. Show average visits per patient
-8. Exit program
+Repeat:
 
-Ask user for choice
+    Display menu:
+        1. Show all patient records
+        2. Search patient by patient_id
+        3. Show most visited doctor
+        4. Show patient with most visits
+        5. (Removed)
+        6. Show average age of patients
+        7. Exit program
 
-IF choice == 1:
-    Display all patient records
+    Ask user for choice
 
-ELSE IF choice == 2:
-    Ask for patient name
-    Search JSON
-    Show patient details or "Not found"
+    IF choice == 1:
+        Display all patient records
 
-ELSE IF choice == 3:
-    Ask for patient name
-    Show doctors consulted
+    ELSE IF choice == 2:
+        Ask for patient_id (input)
+        Search patient list
+        IF found:
+            Display patient details
+        ELSE:
+            Display "Patient not found"
 
-ELSE IF choice == 4:
-    Compute total visits per doctor
-    Display most visited doctor
+    ELSE IF choice == 3:
+        For each doctor:
+            Add up total visits across all patients
+        Doctor with highest total = most visited doctor
+        Display result
 
-ELSE IF choice == 5:
-    Identify patient with highest visits
-    Display result
+    ELSE IF choice == 4:
+        Find patient with highest visit count
+        Display patient name + visits
 
-ELSE IF choice == 6:
-    Sort doctors by visit count
-    Display top 3
+    ELSE IF choice == 6:
+        Add all patient ages
+        Compute average age = total ages / number of patients
+        Display average age
 
-ELSE IF choice == 7:
-    Compute average visits
-    Display result
+    ELSE IF choice == 7:
+        Break loop and exit
 
-ELSE IF choice == 8:
-    End program
+    ELSE:
+        Display "Invalid choice"
 
-Repeat menu until user chooses Exit
+Repeat until choice == 7
+
 End Program
-
-Option 2 
-Flowchart: 
 
