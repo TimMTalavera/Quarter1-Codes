@@ -1,4 +1,4 @@
-📌 Final Project Proposal 
+📌 Final Project Proposal Draft
 🏥 Project Title
 
 Hospital Patient Record Analyzer
@@ -38,7 +38,7 @@ total_visits_doctor = sum(patient_visits)
 
 Identifies the patient with the highest number of hospital visits and displays their name and total visits.
 
-6.) Show average age of patients
+5..) Show average age of patients
 
 Computes the average age of all patients in the dataset.
 
@@ -46,23 +46,21 @@ Equation used:
 
 average_age = total_age_of_all_patients / number_of_patients
 
-7.) Exit program
+6.) Exit program
 
 Ends the program.
 
 
 ⌨️ Planned Inputs and Outputs 
-Inputs (Parallelogram)
+Inputs
 
 patient_id
-
-menu choice (1–7)
-
+menu choice (1-6)
 Outputs (Rectangle)
 
 full patient record list
 
-patient details (via patient_id)
+patient details
 
 most visited doctor
 
@@ -72,7 +70,7 @@ average age of patients
 
 “Not found” or “Invalid choice” messages
 
-🧠 Logic Plan (UPDATED)
+🧠 Logic Plan
 Option 1: Updated Pseudocode
 Start Program
 Load JSON file "hospital.json"
@@ -111,18 +109,21 @@ Repeat:
         Find patient with highest visit count
         Display patient name + visits
 
-    ELSE IF choice == 6:
+    ELSE IF choice == 5:
         Add all patient ages
         Compute average age = total ages / number of patients
         Display average age
 
-    ELSE IF choice == 7:
+    ELSE IF choice == 6: 
         Break loop and exit
 
     ELSE:
         Display "Invalid choice"
 
-Repeat until choice == 7
+Repeat until choice == 6
 
-End Program
+End Program 
 
+Option 2: Flowchart: 2 links, file:///C:/Users/Tim%20Zyker/Downloads/25b8e00f-6fdb-4e0f-874d-8b1f9492fb4a.jpg and file:///C:/Users/Tim%20Zyker/Downloads/7fd427f7-c562-428e-9e15-8f0dd89ff5e4.jpg
+
+JSON FILE https://docs.google.com/document/d/1h4qFpn6zF27kqraAeAq7IzagSjIxRbHKd2rikQPOVpw/edit?tab=t.0
